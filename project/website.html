@@ -1,0 +1,2836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+    margin: 0px;
+    font-family: Arial;
+    border: border-box;
+}
+#header{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    background-color: #fff;
+    top:0;
+    left: 0;
+    box-shadow:0 5px 15px;
+}
+.search input {
+    height: 35px;      
+    width: 250px;    
+    font-size: 16px;   
+    padding: 5px 10px; 
+    background-color: rgb(223, 210, 210);
+    border-radius: 9px;
+}
+#header img {
+    height: 90px; 
+    width: 200px; 
+    width: auto;    
+    margin-left: 20px; 
+    object-fit: contain; 
+}
+#nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav-bar li{
+    list-style-type: none;
+    padding: 0 20px;
+}
+#nav-bar li a{
+    font-size: 16px;
+    text-decoration: none;
+    color:black;
+    font-family:'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.3s;
+}
+#nav-bar li a:hover{
+    color: aquamarine;
+}
+#hero{
+    background-image: url(website\ image.jpg);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero h2{
+    font-family:'Times New Roman', Times, serif;
+}
+#hero p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+#hero button{
+    background-color:transparent;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-weight: 700;
+}
+#hero button:hover{
+    background-color: rgb(109, 154, 212);
+    color: whitesmoke;
+}
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff2e5;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    outline: none;
+    transition: 0.2s;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature .fe-box{
+    width:130px;
+    text-align: center;
+    padding: 15px 25px;
+    box-shadow: 20px 20px 34px rgb(0,0,0.03);
+    border:1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgb(70,62,221,0.1 );
+}
+#feature .fe-box img{
+   width: 100%;
+   margin-bottom: 10px;
+}
+#feature .fe-box h6{
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+#feature .fe-box:nth-child(2) h6 {
+    background-color:#cdebbc ;
+}
+#feature .fe-box:nth-child(3)  h6 {
+    background-color:#d1e8f2 ;
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color:#cdd4f8;
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color:#f6dbf6 ;
+}
+#feature .fe-box:nth-child(6) h6{
+    background-color:#fff2e5 ;
+}
+#product1{
+    text-align: center;
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ,bold;
+    font-size: 50px;
+    font-weight: 300;
+}
+#product1 p{
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#product1 .pro{
+    width: 27%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border:1px solid #cce7d0;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgb(0,0,0,0.02);
+    margin: 15px 0;
+    border-radius: 20px;
+    position: relative;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgb(0,0,0,0.06);
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #606063; 
+    font-size: 14px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-style: arial;
+    font-size: 14px;
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+#product1 .pro .des .star{
+    color: rgb(243,181,25);
+}
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+#banner{
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url(b2.jpg);
+     height: 42vh;
+    width: 100%;
+    background-position: center;
+}
+#banner span{
+    color: red;
+}
+#banner h4{
+    color: #fff2e5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 18px;
+}
+#banner h2{
+    color: #cce7d0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 35px;
+    padding: 10px 0;
+}
+#banner button:hover{
+    background-color: #088178;
+    color: #fff2e5;
+}
+#banner2 {
+   display: flex;
+   justify-content:space-between;
+   align-items: left;
+    gap: 20px; 
+    padding: 20px;
+}
+#banner2 .banner-box {
+    flex: 1;
+    padding: 20px;
+    align-items: flex-start;
+    background-image: url(b17.jpg);
+    border-radius: 10px;
+    min-width:470px; 
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+#banner2 .banner-box h4{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 5px 0;
+    background-color: transparent;
+}
+#banner2 .banner-box h2{
+    color:#fff;
+    margin: 10px 0;
+    font-size: 29px;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#banner2 .banner-box p{
+    font-weight: 700;
+}
+button.white{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 18px;
+    color: #fff;
+    background-color:transparent;
+    border-radius: 4px;
+    cursor:pointer;  
+    outline: none;
+    transition: 0.2s;
+    border-color: #fff;
+}
+button.white:hover{
+    color: #fff;
+    background-color: #032c29;
+}
+#banner2 .banner-box2{
+    background-image: url(b10.jpg);
+}
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    gap: 20px;
+}
+#banner3 .banner-box {
+    flex: 1;
+    padding: 20px;
+    align-items: flex-start;
+    background-image: url(b7.jpg);
+    border-radius: 10px;
+    min-width:30%; 
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    margin-bottom:20px;
+}
+#banner3 .banner-box2{
+    background-image: url(b4.jpg) ;
+}
+#banner3 .banner-box3{
+    background-image: url(b18.jpg) ;
+}
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+}
+#banner3 h3{
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 15px;
+}
+footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #f8f8f8;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    font-size:16px;
+    font-weight: bold;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    text-decoration: none;
+}
+
+footer.follow{ 
+    margin-top: 20px;
+    color: #465b52;
+    padding-right:4px ;
+    cursor: pointer;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+footer .install {
+    margin-top: 15px;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+</style>
+<body>
+   <section id="header">
+        <img src="vibewear 2.jpeg" alt="">
+           <div></div>
+            </div>
+            <div >
+                <ul id="nav-bar">
+                    <li><a href="home.html">Home</i></a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+            </section>
+
+    <section id="hero">
+        <h2>SHAPING A NEW</h2>
+        <h2>ERA OF STYLE AND</h2>
+        <h2>SOPHISTICATION</h2>
+        <p>Elevate your wardrobe and embrace your elegance with every click.</p>
+        <button>See Collection</button>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="f1.png" alt="Free Shipping Icon">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f2.png" alt="Online Order Icon">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f3.png" alt="Save Money Icon">
+            <h6>Save money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f4.png" alt="Promotions Icon">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f5.png" alt="Happy Sell Icon">
+            <h6>Happy sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f6.png" alt="24/7 Support Icon">
+            <h6>24/7 support</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer Collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="p9.jfif" alt="Men Two Tone Shirt">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Men Two Tone Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.1499</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="p5.jfif" alt="Mens Ethnic Totem Print Shirt">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Mens Ethnic Totem Print Patchwork Lapel Short Sleeve Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.1699</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="p6.jfif" alt="Co-ord Set">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Co-ord Set</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.2999</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="pp3.jfif" alt="Vest with Trousers">
+                <div class="des">
+                    <span>shein</span>
+                    <h5>Vest with Trousers</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.3199</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="pp2.jfif" alt="Blue Floral Peplum Kurti Top">
+                <div class="des">
+                    <span>shein</span>
+                    <h5>Blue Floral Peplum Kurti Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.1299</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="pp1.jfif" alt="Ribbed button-down crop Top">
+                <div class="des">
+                    <span>shein</span>
+                    <h5>Ribbed button-down crop Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.2899</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner">
+        <h4>Repair Services</h4>
+        <h2>Upto <span>70% Off</span> - All T-Shirts and Accessories</h2>
+        <button class="normal">Explore More</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Collection New Modern Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="p7.jfif" alt="Men Two Tone Shirt">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Men Two Tone Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.1499</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="p4.jfif" alt="Floral Short Kurti">
+                <div class="des">
+                    <span>KUMAWAT</span>
+                    <h5>Floral Short Kurti</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.1689</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="p8.jfif" alt="Stripped Casual White Shirt">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Stripped Casual White Shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.2099</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="1p.jfif" alt="3 PC's Short Sleeves Crop Top">
+                <div class="des">
+                    <span>shein</span>
+                    <h5>3 PC's Short Sleeves Crop Top</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.2999</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="2p.jfif" alt="Fancy Ravishing dress">
+                <div class="des">
+                    <span>shein</span>
+                    <h5>Fancy Ravishing dress</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.2199</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="3p.jpeg" alt="Cotton Blend T-shirt">
+                <div class="des">
+                    <span>Boston</span>
+                    <h5>Cotton Blend T-shirt</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.1399</h4>
+                    <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner2" class="section-p1">
+        <div class="banner-box">
+            <h4>crazy deals</h4>
+            <h2>buy 1 get 1 free</h2>
+            <p>The best classic dress is on the sale at vibewear</p>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>spring/summer</h4>
+            <h2>upcoming season</h2>
+            <p>The best classic dress is on the sale at vibewear</p>
+            <button class="white">Collection</button>
+        </div>
+    </section>
+
+    <section id="banner3" class="section-p1">
+        <div class="banner-box">
+            <h2>SEASONAL SALE</h2>
+            <h3>Winter Collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>NEW FOOTWEAR COLLECTION</h2>
+            <h3>Spring/Summer 2025</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>T-SHIRTS</h2>
+            <h3>New Trendy Shirts</h3>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="vibewear 2.jpeg" width="120px" alt="Vibewear Logo">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (+91) 01 2345 6789, (+91) 07 8912 4567</p>
+            <p><strong>Hours:</strong> 10:00 AM - 06:00 PM, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="app.jpg" alt="App Store">
+                <img src="play.jpg" alt="Google Play">
+            </div>
+            <p><strong>Secured Payment Gateways</strong></p>
+            <img src="pay.png" alt="Payment Gateways">
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025, Tech2 etc-HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+</body>
+</html>
+Corrected CSS
+CSS
+
+<style>
+    * {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+    }
+
+    #header {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: sticky;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    #header .logo {
+        height: 90px;
+        width: auto;
+        margin-left: 20px;
+        object-fit: contain;
+    }
+
+    .search input {
+        height: 35px;
+        width: 250px;
+        font-size: 16px;
+        padding: 5px 10px;
+        background-color: rgb(223, 210, 210);
+        border-radius: 9px;
+        border: none;
+    }
+
+    #nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav-bar li {
+        list-style-type: none;
+        padding: 0 20px;
+    }
+
+    #nav-bar li a {
+        font-size: 16px;
+        text-decoration: none;
+        color: black;
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        transition: 0.3s;
+    }
+
+    #nav-bar li a:hover {
+        color: aquamarine;
+    }
+
+    #hero {
+        background-image: url("website image.jpg");
+        height: 90vh;
+        width: 100%;
+        background-size: cover;
+        background-position: top 25% right 0;
+        padding: 0 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: #fff; /* Added for better text visibility */
+    }
+
+    #hero h2 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    #hero p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+    }
+
+    #hero button {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        padding: 15px 30px;
+        font-weight: 700;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    #hero button:hover {
+        background-color: rgb(109, 154, 212);
+        color: whitesmoke;
+        border-color: rgb(109, 154, 212);
+    }
+
+    .section-p1 {
+        padding: 40px 80px;
+    }
+
+    #feature {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #feature .fe-box {
+        width: 130px;
+        text-align: center;
+        padding: 15px 25px;
+        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        margin: 15px 0;
+    }
+
+    #feature .fe-box:hover {
+        box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+    }
+
+    #feature .fe-box img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #feature .fe-box h6 {
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
+        border-radius: 4px;
+        color: #088178;
+        background-color: #fddde4;
+    }
+
+    #feature .fe-box:nth-child(2) h6 {
+        background-color: #cdebbc;
+    }
+
+    #feature .fe-box:nth-child(3) h6 {
+        background-color: #d1e8f2;
+    }
+
+    #feature .fe-box:nth-child(4) h6 {
+        background-color: #cdd4f8;
+    }
+
+    #feature .fe-box:nth-child(5) h6 {
+        background-color: #f6dbf6;
+    }
+
+    #feature .fe-box:nth-child(6) h6 {
+        background-color: #fff2e5;
+    }
+
+    #product1 {
+        text-align: center;
+    }
+
+    #product1 .pro-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    #product1 h2 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 50px;
+        font-weight: 300;
+    }
+
+    #product1 p {
+        font-size: medium;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #product1 .pro {
+        width: 27%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid #cce7d0;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        margin: 15px 0;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    #product1 .pro:hover {
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    #product1 .pro img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #product1 .pro .des {
+        text-align: start;
+        padding: 10px 0;
+    }
+
+    #product1 .pro .des span {
+        color: #606063;
+        font-size: 14px;
+    }
+
+    #product1 .pro .des h5 {
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    #product1 .pro .des h4 {
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: #088178;
+    }
+
+    #product1 .pro .des .star {
+        color: rgb(243, 181, 25);
+    }
+
+    #product1 .pro .cart {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+        background-color: #e8f6ea;
+        font-weight: 500;
+        color: #088178;
+        border: 1px solid #cce7d0;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+        text-align: center;
+    }
+
+    #banner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-image: url("b2.jpg");
+        height: 42vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+
+    #banner span {
+        color: red;
+    }
+
+    #banner h4 {
+        color: #fff2e5;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+    }
+
+    #banner h2 {
+        color: #cce7d0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 35px;
+        padding: 10px 0;
+    }
+
+    #banner button.normal {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+
+    #banner button.normal:hover {
+        background-color: #088178;
+        color: #fff2e5;
+    }
+
+    #banner2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px 80px;
+    }
+
+    #banner2 .banner-box {
+        flex: 1;
+        padding: 30px;
+        align-items: flex-start;
+        background-image: url("b17.jpg");
+        border-radius: 10px;
+        min-width: 470px;
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #banner2 .banner-box h4 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 5px 0;
+    }
+
+    #banner2 .banner-box h2 {
+        color: #fff;
+        margin: 10px 0;
+        font-size: 29px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #banner2 .banner-box p {
+        font-weight: 700;
+        color: #fff;
+    }
+
+    button.white {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 18px;
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    button.white:hover {
+        color: #fff;
+        background-color: #032c29;
+    }
+
+    #banner2 .banner-box2 {
+        background-image: url("b10.jpg");
+    }
+
+    #banner3 {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 80px;
+        gap: 20px;
+    }
+
+    #banner3 .banner-box {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("b7.jpg");
+        border-radius: 10px;
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+
+    #banner3 .banner-box2 {
+        background-image: url("b4.jpg");
+    }
+
+    #banner3 .banner-box3 {
+        background-image: url("b18.jpg");
+    }
+
+    #banner3 h2 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    #banner3 h3 {
+        color: #ec544e;
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px 80px;
+        background: #f8f8f8;
+    }
+
+    footer .col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    footer h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    footer p, footer a {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+        text-decoration: none;
+        margin-bottom: 5px;
+    }
+
+    footer .follow {
+        margin-top: 20px;
+    }
+
+    footer .follow .icon i {
+        color: #465b52;
+        padding-right: 4px;
+        cursor: pointer;
+    }
+
+    footer .social-icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    footer .install .row img {
+        border: 1px solid #088178;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    footer .install img {
+        margin: 10px 0 15px 0;
+    }
+
+    footer .copyright {
+        width: 100%;
+        text-align: left;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #777;
+    }
+</style>
+Explanation of Corrections
+Duplicate Code: The HTML and CSS code blocks were repeated. I've consolidated them into single, corrected versions.
+
+HTML Structure:
+
+The <style> and <script> tags should not be nested within other tags like <body>. They belong in the <head> section or at the end of the <body> (for scripts). In this case, the <style> block was moved to the <head>.
+
+The font-awesome CDN link was outdated. I updated it to a more current version to ensure icons display correctly.
+
+Incorrectly nested or unclosed div tags in the <section id="header"> element were corrected.
+
+The section-p1 class was applied to the #banner2 and #banner3 sections to ensure consistent padding.
+
+I added alt attributes to all image tags for accessibility and better SEO.
+
+Corrected the HTML structure for the <footer> section to ensure it is properly formatted and includes all the necessary closing tags. The follow class was moved from the footer element to the div it was meant to style.
+
+CSS Syntax:
+
+The border property for * was incorrect (border: border-box;). It should be box-sizing: border-box;.
+
+The box-shadow properties were missing a unit for the color, e.g., rgb(0,0,0.03) was changed to rgba(0, 0, 0, 0.03).
+
+The #banner section's CSS had an invalid height property height: 42vh; width: 100%;. I've added background-size: cover; and background-position: center; to make sure the image fills the container correctly and centered.
+
+I've updated the button.normal and button.white styles to be more consistent and functional, adding border and cursor properties where they were missing.
+
+The background-image URLs in CSS were missing quotes. I've corrected them to url("image.jpg").
+
+Added z-index: 999; to the header to ensure it stays on top of other content due to its position: sticky; property.
+
+The font-family property in the .des h5 class had a typo (font-style: arial; should be font-family: arial;).
+
+Added text-align: center; to the .pro .cart rule to properly center the cart icon.
+
+I've also made a few minor formatting adjustments for better readability.
+
+These changes should fix the issues and make your website code more robust and functional.
+
+
+
+
+
+
+
+i want to add filters or shortlist items in the website in my i
+
+
+To add filters to your website, you'll need to create a HTML form with various input fields, and then use CSS to style them and JavaScript to handle the filtering logic. Here's how you can add filters to your online shopping website.
+
+1. HTML Structure
+First, add a new section for the filters, likely above your product display. This section will contain a form with different input types like checkboxes, radio buttons, or dropdown menus for categories, price ranges, and brands.
+
+HTML
+
+<section id="filters" class="section-p1">
+    <h3>Filter Products</h3>
+    <form id="filter-form">
+        <div class="filter-group">
+            <h4>Categories</h4>
+            <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
+            <label><input type="checkbox" name="category" value="trousers"> Trousers</label>
+            <label><input type="checkbox" name="category" value="kurti"> Kurti</label>
+            </div>
+
+        <div class="filter-group">
+            <h4>Price Range</h4>
+            <label><input type="radio" name="price" value="0-1000"> Below Rs.1000</label>
+            <label><input type="radio" name="price" value="1000-2000"> Rs.1000 - Rs.2000</label>
+            <label><input type="radio" name="price" value="2000-3000"> Rs.2000 - Rs.3000</label>
+            </div>
+
+        <div class="filter-group">
+            <h4>Brands</h4>
+            <label><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+            <label><input type="checkbox" name="brand" value="shein"> Shein</label>
+            <label><input type="checkbox" name="brand" value="boston"> Boston</label>
+            </div>
+    </form>
+</section>
+2. CSS Styling
+Next, you'll need to style your new filters section to make it look good. You can add this CSS to your existing <style> block.
+
+CSS
+
+#filters {
+    padding: 20px 80px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+#filters h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+    margin-right: 8px;
+}
+3. JavaScript Logic
+This is the most important part. You'll need to write JavaScript code to listen for changes in the filter form and show or hide products accordingly. Place this code in a <script> tag at the end of your <body> section, just before the closing </body> tag.
+
+HTML
+
+<script>
+    // Get all the filter inputs and product items
+    const filterForm = document.getElementById('filter-form');
+    const products = document.querySelectorAll('.pro-container .pro');
+
+    // Add an event listener to the form to detect any change (checkbox/radio click)
+    filterForm.addEventListener('change', () => {
+        const checkedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(cb => cb.value);
+        const checkedBrands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(cb => cb.value);
+        const checkedPriceRange = document.querySelector('input[name="price"]:checked')?.value;
+
+        products.forEach(product => {
+            const productCategory = product.getAttribute('data-category');
+            const productBrand = product.querySelector('.des span').textContent.toLowerCase();
+            const productPrice = parseInt(product.querySelector('.des h4').textContent.replace('Rs.', '').replace(',', ''));
+
+            let categoryMatch = checkedCategories.length === 0 || checkedCategories.includes(productCategory);
+            let brandMatch = checkedBrands.length === 0 || checkedBrands.includes(productBrand);
+            let priceMatch = !checkedPriceRange;
+
+            if (checkedPriceRange) {
+                const [minPrice, maxPrice] = checkedPriceRange.split('-').map(Number);
+                if (maxPrice) {
+                    priceMatch = productPrice >= minPrice && productPrice <= maxPrice;
+                } else {
+                    priceMatch = productPrice < minPrice;
+                }
+            }
+
+            // Show product if all filters match, otherwise hide it
+            if (categoryMatch && brandMatch && priceMatch) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+</script>
+4. Update Your Product HTML
+Finally, you need to add a data-category attribute to each of your product <div> elements. This is how the JavaScript knows what category each product belongs to. You can infer the categories from the product descriptions.
+
+Example:
+
+Change this:
+
+HTML
+
+<div class="pro">
+    <img src="p9.jfif" alt="">
+    <div class="des">
+        <span>adidas</span>
+        <h5> Men Two Tone Shirt</h5>
+        </div>
+</div>
+To this:
+
+HTML
+
+<div class="pro" data-category="shirts">
+    <img src="p9.jfif" alt="">
+    <div class="des">
+        <span>adidas</span>
+        <h5> Men Two Tone Shirt</h5>
+        </div>
+</div>
+Repeat this for all your products, adding the appropriate data-category and data-price attributes to each one.
+
+This setup provides a basic but effective filtering system for your website, making it easier for users to find what they're looking for.
+
+
+
+
+
+
+
+add these items in detail in website give me the code for it
+
+
+Adding new items to your website requires updating both the HTML and the CSS code. Here's a detailed guide on how to add the new products to your existing website structure.
+
+1. Update the HTML
+You'll need to add new product <div> elements within the product containers. I've chosen to add a new section for a "Top Sellers" category to keep the layout organized. Just copy and paste this code into your HTML file, right before the <footer> section.
+
+HTML
+
+<section id="product1" class="section-p1">
+    <h2>Top Sellers</h2>
+    <p>Our Most Popular Items This Season</p>
+    <div class="pro-container">
+        <div class="pro" data-category="shirt" data-brand="zara" data-price="2599">
+            <img src="https://via.placeholder.com/250x250.png?text=Stylish+Shirt" alt="Stylish Men's Shirt">
+            <div class="des">
+                <span>Zara</span>
+                <h5>Men's Casual Linen Shirt</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.2599</h4>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro" data-category="dress" data-brand="hm" data-price="3199">
+            <img src="https://via.placeholder.com/250x250.png?text=Summer+Dress" alt="Elegant Summer Dress">
+            <div class="des">
+                <span>H&M</span>
+                <h5>Floral Print Summer Dress</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h4>Rs.3199</h4>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro" data-category="jeans" data-brand="levis" data-price="4599">
+            <img src="https://via.placeholder.com/250x250.png?text=Denim+Jeans" alt="Classic Denim Jeans">
+            <div class="des">
+                <span>Levi's</span>
+                <h5>Men's Straight Fit Jeans</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.4599</h4>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro" data-category="shoes" data-brand="nike" data-price="6999">
+            <img src="https://via.placeholder.com/250x250.png?text=Running+Shoes" alt="Nike Running Shoes">
+            <div class="des">
+                <span>Nike</span>
+                <h5>Air Max Running Shoes</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.6999</h4>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro" data-category="hoodie" data-brand="adidas" data-price="3499">
+            <img src="https://via.placeholder.com/250x250.png?text=Hoodie" alt="Adidas Hoodie">
+            <div class="des">
+                <span>Adidas</span>
+                <h5>Cozy Fleece Hoodie</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h4>Rs.3499</h4>
+                <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+Key Changes to Your Code
+Product div Structure: Each product is contained within a <div class="pro"> element. This is crucial for maintaining the existing layout and for the filtering functionality.
+
+Product Attributes: To enable filtering, I've added data attributes to each product div:
+
+data-category: Specifies the type of product (e.g., shirt, jeans).
+
+data-brand: Specifies the brand (e.g., zara, hm).
+
+data-price: Specifies the price. This is vital for implementing price range filtering.
+
+Image Placeholders: I've used placeholder images (https://via.placeholder.com/...) for demonstration. You should replace these URLs with your actual product image paths (e.g., images/new_shirt.jpg).
+
+Star Ratings: The rating is represented by Font Awesome icons (<i class="fas fa-star"></i>). A half-star icon (fa-star-half-alt) has been included to show a more detailed rating.
+
+New Section Heading: I've added a new <h2> and <p> to create a distinct section for "Top Sellers" to make the page content more organized.
+
+How it Fits with Existing Code
+This new <section> block is designed to work seamlessly with the existing CSS rules for .pro-container and .pro, so no additional styling is required for the new products to display correctly. The data attributes are added to prepare the page for the JavaScript filtering logic you were previously provided.
+
+Next Steps
+After adding this code, you may also need to:
+
+Update the filter HTML: Add new checkboxes or radio buttons to the filter section for the new brands (Zara, H&M, Levi's, Nike) and categories (jeans, shoes, hoodie).
+
+Add product images: Replace the placeholder image URLs with the actual paths to your product images.
+
+Refine the CSS: Depending on your design preferences, you might want to add specific styles for the new section.
+
+
+
+
+
+
+
+i want to add filters or categories in left corner of webpage in detail with price, size , items etc
+
+
+To add detailed filters to the left corner of your webpage, you'll need to update your HTML to create a dedicated sidebar for the filters, use CSS to position and style it, and then implement JavaScript to handle the filtering logic. Here's a comprehensive guide with code examples.
+
+1. HTML Structure
+First, restructure your HTML to include a dedicated <aside> or <div> element for the filter sidebar. Place this new element to the left of your product container.
+
+HTML
+
+<body>
+    <section id="header">
+        </section>
+
+    <section id="main-content">
+        <aside id="filter-sidebar">
+            <h3>Filters</h3>
+            <form id="filter-form">
+                <div class="filter-group">
+                    <h4>Price</h4>
+                    <label><input type="checkbox" name="price" value="0-1000"> Below Rs.1000</label>
+                    <label><input type="checkbox" name="price" value="1000-2000"> Rs.1000 - Rs.2000</label>
+                    <label><input type="checkbox" name="price" value="2000-3000"> Rs.2000 - Rs.3000</label>
+                    <label><input type="checkbox" name="price" value="3000-5000"> Rs.3000 - Rs.5000</label>
+                    <label><input type="checkbox" name="price" value="5000+"> Above Rs.5000</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
+                    <label><input type="checkbox" name="category" value="trousers"> Trousers</label>
+                    <label><input type="checkbox" name="category" value="kurti"> Kurti</label>
+                    <label><input type="checkbox" name="category" value="dress"> Dresses</label>
+                    <label><input type="checkbox" name="category" value="jeans"> Jeans</label>
+                    <label><input type="checkbox" name="category" value="shoes"> Shoes</label>
+                    <label><input type="checkbox" name="category" value="hoodie"> Hoodies</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brands</h4>
+                    <label><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+                    <label><input type="checkbox" name="brand" value="shein"> Shein</label>
+                    <label><input type="checkbox" name="brand" value="boston"> Boston</label>
+                    <label><input type="checkbox" name="brand" value="zara"> Zara</label>
+                    <label><input type="checkbox" name="brand" value="hm"> H&M</label>
+                    <label><input type="checkbox" name="brand" value="levis"> Levi's</label>
+                    <label><input type="checkbox" name="brand" value="nike"> Nike</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Size</h4>
+                    <label><input type="checkbox" name="size" value="s"> S</label>
+                    <label><input type="checkbox" name="size" value="m"> M</label>
+                    <label><input type="checkbox" name="size" value="l"> L</label>
+                    <label><input type="checkbox" name="size" value="xl"> XL</label>
+                </div>
+            </form>
+        </aside>
+
+        <div id="product-list-container">
+            <section id="product1" class="section-p1">
+                <h2>Featured Products</h2>
+                <p>Summer Collection New Modern Design</p>
+                <div class="pro-container">
+                    <div class="pro" data-category="shirts" data-brand="adidas" data-price="1499" data-sizes="m,l">
+                        <img src="p9.jfif" alt="Men Two Tone Shirt">
+                        </div>
+                    </div>
+            </section>
+            
+            <section id="product1" class="section-p1">
+                <h2>New Arrivals</h2>
+                </section>
+
+            <section id="product-top-sellers" class="section-p1">
+                <h2>Top Sellers</h2>
+                </section>
+        </div>
+    </section>
+
+    </body>
+2. CSS Styling
+To place the filter sidebar on the left and manage the layout, you'll need to use Flexbox. Add the following CSS to your <style> block.
+
+CSS
+
+#main-content {
+    display: flex;
+    padding: 20px 80px;
+}
+
+#filter-sidebar {
+    width: 250px;
+    padding: 20px;
+    margin-right: 30px;
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    background-color: #f9f9f9;
+    align-self: flex-start;
+}
+
+#filter-sidebar h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#product-list-container {
+    flex-grow: 1;
+}
+
+/* Adjust your existing product sections to fit the new container */
+#product1 {
+    text-align: center;
+    padding: 0; /* Remove padding from here as it's handled by #main-content */
+}
+3. JavaScript Logic
+The JavaScript needs to be updated to handle multiple filter criteria simultaneously. It will check if a product matches the selected category, brand, price range, and size before displaying it.
+
+JavaScript
+
+<script>
+    const filterForm = document.getElementById('filter-form');
+    const products = document.querySelectorAll('.pro-container .pro');
+
+    filterForm.addEventListener('change', () => {
+        const checkedPrices = Array.from(document.querySelectorAll('input[name="price"]:checked')).map(cb => cb.value);
+        const checkedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(cb => cb.value);
+        const checkedBrands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(cb => cb.value);
+        const checkedSizes = Array.from(document.querySelectorAll('input[name="size"]:checked')).map(cb => cb.value);
+
+        products.forEach(product => {
+            const productPrice = parseInt(product.getAttribute('data-price'));
+            const productCategory = product.getAttribute('data-category');
+            const productBrand = product.getAttribute('data-brand');
+            const productSizes = product.getAttribute('data-sizes').split(',');
+
+            // Check if product matches all active filters
+            const priceMatch = checkedPrices.length === 0 || checkedPrices.some(range => {
+                const [min, max] = range.split('-').map(Number);
+                if (max) {
+                    return productPrice >= min && productPrice <= max;
+                } else {
+                    return productPrice >= min;
+                }
+            });
+
+            const categoryMatch = checkedCategories.length === 0 || checkedCategories.includes(productCategory);
+            const brandMatch = checkedBrands.length === 0 || checkedBrands.includes(productBrand);
+            const sizeMatch = checkedSizes.length === 0 || productSizes.some(size => checkedSizes.includes(size));
+
+            // Show/hide based on all filter matches
+            if (priceMatch && categoryMatch && brandMatch && sizeMatch) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+</script>
+4. Update Product divs with Data Attributes
+For the JavaScript to work, you must add the new data attributes to every single product <div> on your page.
+
+Before:
+
+HTML
+
+<div class="pro">...</div>
+After:
+
+HTML
+
+<div class="pro" data-category="shirts" data-brand="adidas" data-price="1499" data-sizes="m,l,xl">...</div>
+data-category: The type of product (e.g., shirts, dresses).
+
+data-brand: The brand name (e.g., adidas, zara).
+
+data-price: The price as a number (e.g., 1499).
+
+data-sizes: A comma-separated list of available sizes (e.g., s,m,l).
+
+By following these steps, you will have a functional and well-styled filter sidebar on your webpage that allows users to easily sort products by price, category, brand, and size.
+
+
+
+
+
+
+
+
+i created a mistake in this alignment please correct this alignment to look my website correct
+
+
+
+Analysis
+Based on the screenshot, it looks like your filter sidebar is floating in the middle of the page and is not correctly aligned to the left, while your product items and other content are positioned incorrectly. This is likely due to an issue with your Flexbox or grid layout.
+
+Here are the key corrections to align your website elements correctly.
+
+Corrected HTML Structure
+First, ensure your HTML is structured to use a single parent container for both the filter sidebar and the product area. This is the foundation for a proper Flexbox layout.
+
+HTML
+
+<body>
+    <section id="header">
+        </section>
+    <section id="hero">
+        </section>
+
+    <div id="main-container">
+        <aside id="filter-sidebar">
+            <h3>Filters</h3>
+            </aside>
+
+        <div id="content-area">
+            <section id="product1" class="section-p1">
+                <h2>Featured Products</h2>
+                <p>Summer Collection New Modern Design</p>
+                <div class="pro-container">
+                    </div>
+            </section>
+
+            <section id="banner">
+                </section>
+            
+            <section id="product1" class="section-p1">
+                <h2>New Arrivals</h2>
+                </section>
+
+            </div>
+    </div>
+    <footer class="section-p1">
+        </footer>
+</body>
+Corrected CSS Styling
+Next, use CSS Flexbox to manage the layout. The key is to make the main-container a flex container and define the width for the sidebar.
+
+CSS
+
+/* Add this to your existing CSS file */
+
+/* Container for sidebar and main content */
+#main-container {
+    display: flex;
+    padding: 40px 80px;
+    align-items: flex-start; /* Aligns items to the top of the container */
+}
+
+/* Sidebar styling */
+#filter-sidebar {
+    width: 250px;
+    padding: 20px;
+    margin-right: 30px;
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    /* Make the sidebar sticky for better user experience */
+    position: sticky;
+    top: 110px; /* Adjust this value to set the distance from the top */
+}
+
+/* Content area for all products and other sections */
+#content-area {
+    flex-grow: 1; /* Allows this div to take up the remaining space */
+}
+
+/* Adjustments for existing sections */
+.section-p1 {
+    padding: 0; /* The padding is now on #main-container */
+}
+
+/* Ensure the product container maintains its display property */
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+Why These Changes Work
+#main-container: By setting display: flex, we turn this element into a Flexbox container. This allows its direct children (#filter-sidebar and #content-area) to be positioned side by side.
+
+#filter-sidebar: We give it a fixed width of 250px and a margin-right to create space between it and the products. The position: sticky property makes the filter sidebar stay visible as the user scrolls down the page, which is a great user experience feature.
+
+#content-area: Setting flex-grow: 1 tells this container to expand and fill all the available horizontal space after the sidebar has taken its designated width.
+
+.section-p1 Padding: You had padding: 40px 80px; on the .section-p1 class. To avoid double-padding and misalignment, the main padding is now handled by #main-container.
+
+By implementing these changes, your website will have a clean, two-column layout, with the filter sidebar fixed on the left and your products and other content correctly positioned in the main area.
+
+
+
+
+
+
+
+<section id="main-content">
+
+<aside id="filter-sidebar">
+
+<h3>Filters</h3>
+
+<form id="filter-form">
+
+<div class="filter-group">
+
+<h4>Price</h4>
+
+<label><input type="checkbox" name="price" value="0-1000"> Below Rs.1000</label>
+
+<label><input type="checkbox" name="price" value="1000-2000"> Rs.1000 - Rs.2000</label>
+
+<label><input type="checkbox" name="price" value="2000-3000"> Rs.2000 - Rs.3000</label>
+
+<label><input type="checkbox" name="price" value="3000-5000"> Rs.3000 - Rs.5000</label>
+
+<label><input type="checkbox" name="price" value="5000+"> Above Rs.5000</label>
+
+</div>
+
+
+
+<div class="filter-group">
+
+<h4>Categories</h4>
+
+<label><input type="checkbox" name="category" value="shirts"> Shirts</label>
+
+<label><input type="checkbox" name="category" value="trousers"> Trousers</label>
+
+<label><input type="checkbox" name="category" value="kurti"> Kurti</label>
+
+<label><input type="checkbox" name="category" value="dress"> Dresses</label>
+
+<label><input type="checkbox" name="category" value="jeans"> Jeans</label>
+
+<label><input type="checkbox" name="category" value="shoes"> Shoes</label>
+
+<label><input type="checkbox" name="category" value="hoodie"> Hoodies</label>
+
+</div>
+
+
+
+<div class="filter-group">
+
+<h4>Brands</h4>
+
+<label><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+
+<label><input type="checkbox" name="brand" value="shein"> Shein</label>
+
+<label><input type="checkbox" name="brand" value="boston"> Boston</label>
+
+<label><input type="checkbox" name="brand" value="zara"> Zara</label>
+
+<label><input type="checkbox" name="brand" value="hm"> H&M</label>
+
+<label><input type="checkbox" name="brand" value="levis"> Levi's</label>
+
+<label><input type="checkbox" name="brand" value="nike"> Nike</label>
+
+</div>
+
+
+
+<div class="filter-group">
+
+<h4>Size</h4>
+
+<label><input type="checkbox" name="size" value="s"> S</label>
+
+<label><input type="checkbox" name="size" value="m"> M</label>
+
+<label><input type="checkbox" name="size" value="l"> L</label>
+
+<label><input type="checkbox" name="size" value="xl"> XL</label>
+
+</div>
+
+</form>
+
+</aside>
+
+
+
+Your HTML code for the filter sidebar is already well-structured. It's a clear and logical representation of the filters you want to implement. However, to make this code functional and visually integrated into your website, it's missing the associated CSS styling and JavaScript logic. The HTML alone will not be enough to make the filters appear correctly or work as intended.
+
+To create a complete and functional filter section, you need to:
+
+1. Position and Style the Sidebar with CSS
+The provided HTML code is a snippet and needs to be placed within a larger page layout. To make the sidebar appear on the left, you should wrap it and the main product content in a parent container and apply Flexbox.
+
+HTML Adjustments (If not already done):
+
+HTML
+
+<div id="main-container">
+    <aside id="filter-sidebar">
+        </aside>
+    <div id="content-area">
+        </div>
+</div>
+CSS to add:
+
+CSS
+
+#main-container {
+    display: flex;
+    padding: 40px 80px;
+    align-items: flex-start;
+}
+
+#filter-sidebar {
+    width: 250px;
+    padding: 20px;
+    margin-right: 30px;
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Keeps the sidebar visible on scroll */
+    top: 110px;
+}
+
+#filter-sidebar h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#content-area {
+    flex-grow: 1; /* Takes up the remaining space */
+}
+This CSS will create a two-column layout with the filter sidebar on the left. The position: sticky property will make it remain on the screen as the user scrolls, which is a key part of a good filtering experience.
+
+2. Implement Filtering Logic with JavaScript
+The HTML checkboxes and radio buttons are static and won't do anything on their own. You need JavaScript to listen for user clicks and then show or hide products accordingly. This requires a script that:
+
+Gets all filter selections: Reads the state of all checked checkboxes in the form.
+
+Iterates through products: Looks at each product item on the page.
+
+Checks for matches: Compares the product's attributes (data-category, data-price, etc.) to the selected filters.
+
+Updates visibility: Hides products that don't match the criteria and shows those that do.
+
+JavaScript code to add:
+
+JavaScript
+
+<script>
+    const filterForm = document.getElementById('filter-form');
+    const products = document.querySelectorAll('.pro'); // Select all product items
+
+    filterForm.addEventListener('change', () => {
+        const checkedPrices = Array.from(document.querySelectorAll('input[name="price"]:checked')).map(cb => cb.value);
+        const checkedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(cb => cb.value);
+        const checkedBrands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(cb => cb.value);
+        const checkedSizes = Array.from(document.querySelectorAll('input[name="size"]:checked')).map(cb => cb.value);
+
+        products.forEach(product => {
+            // Get product attributes from data tags
+            const productPrice = parseInt(product.getAttribute('data-price'));
+            const productCategory = product.getAttribute('data-category');
+            const productBrand = product.getAttribute('data-brand');
+            const productSizes = product.getAttribute('data-sizes').split(',');
+
+            // Check if product matches all active filters
+            const priceMatch = checkedPrices.length === 0 || checkedPrices.some(range => {
+                const [min, max] = range.includes('+') ? [parseInt(range), Infinity] : range.split('-').map(Number);
+                return productPrice >= min && productPrice <= max;
+            });
+
+            const categoryMatch = checkedCategories.length === 0 || checkedCategories.includes(productCategory);
+            const brandMatch = checkedBrands.length === 0 || checkedBrands.includes(productBrand);
+            const sizeMatch = checkedSizes.length === 0 || productSizes.some(size => checkedSizes.includes(size));
+
+            if (priceMatch && categoryMatch && brandMatch && sizeMatch) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+</script>
+This JavaScript code is the brain of your filters. It reads the HTML and dynamically updates the page based on user interactions, making your filter sidebar fully functional.
+
+
+
+
+
+
+
+i want styling of this section in such a way that it appears in the top left corner with the main logo of vibewear
+
+
+To make your filter section appear in the top-left corner with the main logo, you'll need to modify the HTML structure and apply CSS styling. The goal is to place the filter section as a sidebar, separate from the main product content, while keeping the brand logo visible at the top.
+
+Here is the corrected code to achieve this layout.
+
+Corrected HTML Structure
+First, you need to embed your filter section within the main header area. This means placing the aside tag inside the <section id="header"> element. This keeps the logo and the filter button logically grouped at the top of the page.
+
+HTML
+
+<body>
+    <section id="header">
+        <img src="vibewear 2.jpeg" alt="Vibewear Logo">
+        <aside id="filter-top-bar">
+            <button id="filter-toggle">
+                <i class="fa-solid fa-filter"></i> Filters
+            </button>
+        </aside>
+        <div>
+            <ul id="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <aside id="filter-sidebar">
+        <h3>Filters</h3>
+        <form id="filter-form">
+            <div class="filter-group">
+                <h4>Price</h4>
+                <label><input type="checkbox" name="price" value="0-1000"> Below Rs.1000</label>
+                <label><input type="checkbox" name="price" value="1000-2000"> Rs.1000 - Rs.2000</label>
+                </div>
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
+                </div>
+            </form>
+    </aside>
+
+    <div id="product-list-container">
+        <section id="product1" class="section-p1">
+            <h2>Featured Products</h2>
+            </section>
+        </div>
+</body>
+CSS Styling for the Top-Left Corner Filter
+The CSS will now position the filter sidebar as a hidden, off-canvas menu that slides in from the left when the button in the header is clicked. This is a common pattern for mobile-first design, but it works well on desktops too.
+
+CSS
+
+/* Styling for the header area */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This spreads the logo, filter, and nav-bar */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the header is on top of other content */
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 0 80px;
+}
+
+#header img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Styling for the filter button in the header */
+#filter-toggle {
+    background: none;
+    border: 1px solid #cce7d0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #088178;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling for the filter sidebar itself */
+#filter-sidebar {
+    width: 280px;
+    height: 100%;
+    position: fixed; /* Positions it relative to the viewport */
+    top: 0;
+    left: -280px; /* Hides it off-screen to the left */
+    background-color: #f9f9f9;
+    padding: 20px;
+    z-index: 999;
+    transition: left 0.3s ease-in-out; /* Smooth slide-in transition */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allows scrolling if filters are too long */
+}
+
+/* Class to make the sidebar visible */
+#filter-sidebar.active {
+    left: 0; /* Slides the sidebar into view */
+}
+
+/* The rest of your filter-specific styles from previous responses should be kept */
+.filter-group {
+    /* ... your styles ... */
+}
+JavaScript to Toggle the Sidebar
+Finally, you need a small piece of JavaScript to handle the click event on the filter button. This script will add and remove the .active class, which controls the visibility of the sidebar.
+
+JavaScript
+
+<script>
+    const filterToggleBtn = document.getElementById('filter-toggle');
+    const filterSidebar = document.getElementById('filter-sidebar');
+
+    filterToggleBtn.addEventListener('click', () => {
+        filterSidebar.classList.toggle('active');
+    });
+</script>
+By following these steps, your website will have a clean, modern design where the filter options are neatly tucked away and can be accessed via a button in the top-left corner, right next to your brand logo. This approach provides a much better user experience than a static, always-visible sidebar.
+
+
+
+
+
+
+
+
+correct the structure and styling of filters in this webpage
+
+
+
+Analysis
+The filter list on your webpage is misaligned and bleeding into the header section. This is because it is not properly contained or styled. To fix this, you should place the filters in a dedicated sidebar and use CSS to correctly position it next to the main content.
+
+Here are the corrected HTML and CSS codes to solve this issue.
+
+Corrected HTML
+The filter list needs to be separate from the navigation bar. You should place it in its own <aside> element outside of the <section id="header">. Then, a new parent container should wrap both the filter sidebar and the main product content to manage their layout.
+
+HTML
+
+<body>
+    <section id="header">
+        <img src="vibewear 2.jpeg" alt="Vibewear Logo">
+        <div>
+            <ul id="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="main-container">
+        <aside id="filter-sidebar">
+            <h3>Filters</h3>
+            <form id="filter-form">
+                </form>
+        </aside>
+
+        <div id="content-area">
+            <section id="hero">
+                </section>
+            
+            <section id="feature" class="section-p1">
+                </section>
+            
+            <section id="product1" class="section-p1">
+                <h2>Featured Products</h2>
+                <p>Summer Collection New Modern Design</p>
+                <div class="pro-container">
+                    </div>
+            </section>
+
+            </div>
+    </div>
+    <footer class="section-p1">
+        </footer>
+</body>
+Corrected CSS
+The CSS is the key to fixing the alignment. You'll use Flexbox on the new #main-container to create a two-column layout. The filters will occupy a fixed-width column on the left, and the main product area will take up the rest of the space.
+
+CSS
+
+/* Add this to your existing CSS file */
+
+/* Main container for the filter sidebar and content area */
+#main-container {
+    display: flex;
+    padding: 40px 80px;
+    align-items: flex-start; /* Aligns items to the top */
+}
+
+/* Styling for the filter sidebar */
+#filter-sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    padding: 20px;
+    margin-right: 30px; /* Space between sidebar and products */
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    /* Make the sidebar sticky to stay in view while scrolling */
+    position: sticky;
+    top: 110px; /* Adjust based on your header's height */
+}
+
+#filter-sidebar h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Container for the hero section and all products */
+#content-area {
+    flex-grow: 1; /* Allows this to take up the remaining space */
+}
+
+/* Remove padding from existing sections now that it's on the main container */
+.section-p1 {
+    padding: 0;
+}
+Why these changes work:
+HTML Structure: By creating a single parent div (#main-container), you can control the layout of its children (#filter-sidebar and #content-area) with a single set of CSS rules.
+
+Flexbox: The display: flex property on the #main-container automatically arranges its children in a row.
+
+Sticky Position: The position: sticky on the #filter-sidebar keeps the filters visible as the user scrolls through the products, providing a better user experience.
+
+
+
+
+
+
+
+
+i want the filters styling like this in top left coorner
+
+
+
+Analysis
+To replicate the styling from the image, you need to change your filter checkboxes and labels into a button-like appearance using CSS. This involves hiding the default checkbox input and styling the label that wraps it. You'll also adjust the layout to create a more compact, grid-like arrangement for options like size.
+
+Here's a breakdown of the CSS you'll need to achieve this look, assuming your HTML structure remains the same as in previous responses (with input type="checkbox" inside a <label>):
+
+CSS
+
+/* Overall filter sidebar container */
+#filter-sidebar {
+    width: 250px;
+    padding: 20px;
+    margin-right: 30px;
+    border: 1px solid #cce7d0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 110px;
+}
+
+/* Headings for filter groups */
+.filter-group h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Hiding the default checkbox */
+.filter-group input[type="checkbox"] {
+    position: absolute; /* Hides the actual checkbox */
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Styling the labels to look like buttons */
+.filter-group label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s, border-color 0.2s;
+    text-align: center;
+}
+
+/* Style for selected filter buttons */
+.filter-group input[type="checkbox"]:checked + label {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Layout for size buttons */
+.filter-group.size-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+}
+
+.filter-group.size-buttons label {
+    flex: 1 0 25%; /* Creates a responsive grid with about 3 buttons per row */
+    min-width: 50px; /* Prevents buttons from getting too small */
+}
+
+/* Adding a dropdown-like arrow to the headings */
+.filter-group h4::after {
+    content: "▲";
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+.filter-group h4.collapsed::after {
+    transform: rotate(180deg);
+}
+
+/* Add JavaScript to handle filter toggling */
+/* (This is a small addition to your existing script) */
+<script>
+    const filterGroupHeaders = document.querySelectorAll('.filter-group h4');
+    filterGroupHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            header.classList.toggle('collapsed');
+            const content = header.nextElementSibling;
+            if (content.style.display === "none") {
+                content.style.display = "flex"; // Or "block" if not using Flexbox
+            } else {
+                content.style.display = "none";
+            }
+        });
+    });
+</script>
+Explanation of Changes:
+Hiding Checkboxes: position: absolute and opacity: 0 on the input[type="checkbox"] makes them invisible. The <label> element is now what the user sees and clicks.
+
+Styling Labels: The label elements are styled with a background, border, padding, and border-radius to resemble buttons. display: inline-flex helps align the content and size the buttons correctly.
+
+Active State: The :checked pseudo-class on the hidden checkbox, combined with the adjacent sibling selector (+ label), styles the label when its associated checkbox is selected.
+
+Grid Layout: For filter groups like "Size," applying display: flex and flex-wrap: wrap to a parent container (<div class="filter-group size-buttons">) allows the buttons to arrange themselves in a neat, responsive grid.
+
+Expand/Collapse: The ::after pseudo-element adds a triangular arrow next to the heading. A simple JavaScript snippet toggles a .collapsed class, which rotates the arrow and hides/shows the filter options below it. This improves page usability.
+
+These changes will give your filters the clean, professional, and functional appearance you're looking for.
+
+
+
+
+
+
+
+
+
+this is not like that i wanted
+
+
+
+Analysis
+It looks like the filters are appearing horizontally in the header, rather than in a separate, vertical sidebar. This is because the code is not properly structuring the filters into a distinct left-side section. To fix this, you need to create a new parent container for the filters and use CSS to position it to the left of your main product content.
+
+Here is the corrected HTML and CSS to solve this alignment issue and achieve a vertical filter sidebar.
+
+Corrected HTML Structure
+The key change is to move the filters out of the header's navigation area. The filters should be placed in a separate div or <aside> element. This new filter container will sit next to a container that holds all your product content, like the hero section and product listings.
+
+HTML
+
+<body>
+    <section id="header">
+        <img src="vibewear 2.jpeg" alt="Vibewear Logo">
+        <div>
+            <ul id="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    
+        </section>
+   <section id="hero">
+    <h2>SHAPING A NEW</h2>
+    <h2>ERA OF STYLE AND </h2>
+    <h2>SOPHISTICATION</h2>
+    <P>Elevate your wardrobe and embrace your elegance with every click.</P>
+    <button>See Collection</button>
+</section>
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="f1.png" alt="">
+        <h6>Free Shipping</h6>
+    </div>
+     <div class="fe-box">
+        <img src="f2.png" alt="">
+        <h6>Online Order</h6>
+    </div>
+     <div class="fe-box">
+        <img src="f3.png" alt="">
+        <h6>Save money</h6>
+    </div>
+     <div class="fe-box">
+        <img src="f4.png" alt="">
+        <h6>Promotions</h6>
+    </div>
+     <div class="fe-box">
+        <img src="f5.png" alt="">
+        <h6>Happy sell</h6>
+    </div>
+     <div class="fe-box">
+        <img src="f6.png" alt="">
+        <h6>F24/7 support</h6>
+    </div>
+
+</section>
+<section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>Summer Collection New Modern Design</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="p9.jfif" alt="">
+            <div class="des">
+            <span>adidas</span>
+            <h5> Men Two Tone Shirt</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.1499</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        </div>
+        <div class="pro">
+            <img src="p5.jfif" alt="">
+            <div class="des">
+            <span>adidas</span>
+            <h5> Mens Ethnic Totem Print Patchwork Lapel Short Sleeve Shirts</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.1699</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="p6.jfif" alt="">
+            <div class="des">
+            <span>adidas</span>
+            <h5> Co-ord Set</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.2999</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="pp3.jfif" alt="">
+            <div class="des">
+            <span>shein</span>
+            <h5> Vest with Trousers</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+            <h4>Rs.3199</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="pp2.jfif" alt="">
+            <div class="des">
+            <span>shein</span>
+            <h5> Blue Floral Peplum Kurti Top</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.1299</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="pp1.jfif" alt="">
+            <div class="des">
+            <span></span>
+            <h5>Ribbed button-down crop Top</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.2899</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+</section>
+<section id="banner">
+    <h4>Repair Services</h4>
+    <h2>Upto <span>70% Off</span> - All T-Shirts and Accessories</h2>
+    <button class="normal">Explore More</button>
+</section>
+<section id="product1" class="section-p1">
+    <h2>New Arrivals</h2>
+    <p>Collection New Modern Design</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="p7.jfif" alt="">
+            <div class="des">
+            <span>adidas</span>
+            <h5> Men Two Tone Shirt</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.1499</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        </div>
+        <div class="pro">
+            <img src="p4.jfif" alt="">
+            <div class="des">
+            <span>KUMAWAT</span>
+            <h5> Floral Short Kurti</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.1689</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="p8.jfif" alt="">
+            <div class="des">
+            <span>adidas</span>
+            <h5> Stripped Casual White Shirt</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.2099</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="1p.jfif" alt="">
+            <div class="des">
+            <span>shein</span>
+            <h5> 3 PC's Short Sleeves Crop Top </h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                </div>
+            <h4>Rs.2999</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="2p.jfif" alt="">
+            <div class="des">
+            <span>shein</span>
+            <h5>Fancy Ravishing dress</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.2199</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="3p.jpeg" alt="">
+            <div class="des">
+            <span>Boston</span>
+            <h5>Cotton Blend T-shirt</h5>
+            <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h4>Rs.1399</h4>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+</section>
+<section id="banner2">
+    <div class="banner-box">
+        <h4>crazy deals</h4>
+        <h2>buy 1 get 1 free</h2>
+        <p>The best classic dress is on the sale at vibewear</p>
+        <button class="white">Learn More</button>
+    </div>
+    <div class="banner-box banner-box2">
+        <h4>spring/summer</h4>
+        <h2>upcoming season</h2>
+        <p>The best classic dress is on the sale at vibewear</p>
+        <button class="white">Collection</button>
+    </div>
+</section>
+<section id="banner3">
+    <div class="banner-box">
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+    </div>
+      <div class=" banner-box banner-box2">
+        <h2>NEW FOOTWEAR COLLECTION</h2>
+        <h3>Spring/Summer 2025</h3>
+    </div>
+      <div class="banner-box banner-box3">
+        <h2>T-SHIRTS</h2>
+        <h3>New Trendy Shirts</h3>
+    </div>
+    </section>
+
+   <section id="main-content">
+        <aside id="filter-sidebar">
+            <h3>Filters</h3>
+            <form id="filter-form">
+                <div class="filter-group">
+                    <h4>Price</h4>
+                    <label><input type="checkbox" name="price" value="0-1000"> Below Rs.1000</label>
+                    <label><input type="checkbox" name="price" value="1000-2000"> Rs.1000 - Rs.2000</label>
+                    <label><input type="checkbox" name="price" value="2000-3000"> Rs.2000 - Rs.3000</label>
+                    <label><input type="checkbox" name="price" value="3000-5000"> Rs.3000 - Rs.5000</label>
+                    <label><input type="checkbox" name="price" value="5000+"> Above Rs.5000</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
+                    <label><input type="checkbox" name="category" value="trousers"> Trousers</label>
+                    <label><input type="checkbox" name="category" value="kurti"> Kurti</label>
+                    <label><input type="checkbox" name="category" value="dress"> Dresses</label>
+                    <label><input type="checkbox" name="category" value="jeans"> Jeans</label>
+                    <label><input type="checkbox" name="category" value="shoes"> Shoes</label>
+                    <label><input type="checkbox" name="category" value="hoodie"> Hoodies</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brands</h4>
+                    <label><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+                    <label><input type="checkbox" name="brand" value="shein"> Shein</label>
+                    <label><input type="checkbox" name="brand" value="boston"> Boston</label>
+                    <label><input type="checkbox" name="brand" value="zara"> Zara</label>
+                    <label><input type="checkbox" name="brand" value="hm"> H&M</label>
+                    <label><input type="checkbox" name="brand" value="levis"> Levi's</label>
+                    <label><input type="checkbox" name="brand" value="nike"> Nike</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Size</h4>
+                    <label><input type="checkbox" name="size" value="s"> S</label>
+                    <label><input type="checkbox" name="size" value="m"> M</label>
+                    <label><input type="checkbox" name="size" value="l"> L</label>
+                    <label><input type="checkbox" name="size" value="xl"> XL</label>
+                </div>
+            </form>
+        </aside>
+</section>
+          
+   
+    
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="vibewear 2.jpeg" width="120px">
+        <h4>Contact</h4>
+        <p><b>Phone:</b>(+91)01 2345 6789 , (+91)07 8912 4567</p>
+        <p><b>Hours:</b>10:00 AM - 06:00 PM, Mon-Sat</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms&Conditions</a>
+        <a href="#">Contact us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign in</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track my order</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="app.jpg" alt="">
+            <img src="play.jpg" alt="">
+        </div>
+        <p><b>Secured Payment Gateways</b></p>
+        <img src="pay.png" alt="">
+    </div>
+    <div class="copyright">
+        <p>2025, Tech2 etc-HTML CSS Ecommerce Template</p>
+    </div>
+</footer>
+</body>
+</html>

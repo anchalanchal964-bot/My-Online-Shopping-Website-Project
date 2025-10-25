@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback System - Project</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #007bff; 
+            --secondary-color: #28a745; 
+            --background-color: #f4f7f6; 
+            --card-background: #ffffff; 
+            --text-color: #343a40; 
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- Header/Navbar --- */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--card-background);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 25px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Main Container / Card --- */
+        .feedback-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            padding: 40px;
+            margin-top: 80px; /* Space for fixed header */
+        }
+
+        .feedback-container h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .feedback-container p.subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        /* --- Form Styling --- */
+        .feedback-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        /* Two-column layout for some fields */
+        .form-group.split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* --- Rating Section --- */
+        .rating-group {
+            padding: 15px;
+            border: 1px dashed #ced4da;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        .rating-scale {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .rating-option {
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .rating-option input[type="radio"] {
+            /* Hide default radio button */
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .rating-option label {
+            display: block;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: 600;
+            border: 2px solid #ced4da;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 5px auto;
+        }
+
+        .rating-option input[type="radio"]:checked + label {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        .rating-option span {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        /* --- Submit Button --- */
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s;
+            box-shadow: var(--shadow-light);
+        }
+
+        .submit-btn:hover {
+            background-color: #218838; /* Darker Green */
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(2px);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsiveness --- */
+        @media (max-width: 600px) {
+            .feedback-container {
+                padding: 25px;
+            }
+            .feedback-container h1 {
+                font-size: 1.8rem;
+            }
+            .form-group.split {
+                grid-template-columns: 1fr; /* Stack columns on small screens */
+            }
+            .rating-scale {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .rating-option {
+                flex-basis: 25%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><a href="#">FeedbackFlow</a></div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Dashboard</a>
+                <a href="#">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="feedback-container">
+        <h1>Faculty & Course Feedback</h1>
+        <p class="subtitle">Your honest feedback helps us improve the learning experience. Thank you for your time! 👍</p>
+
+        <form class="feedback-form" action="#" method="POST">
+            
+            <div class="form-group split">
+                <div>
+                    <label for="studentName">Your Full Name</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                <div>
+                    <label for="studentEmail">College Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required>
+                </div>
+            </div>
+
+            <div class="form-group split">
+                <div>
+                    <label for="course">Select Course</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Choose Course --</option>
+                        <option value="cs101">CS 101: Introduction to Programming</option>
+                        <option value="math201">Math 201: Calculus II</option>
+                        <option value="eng305">Eng 305: Technical Writing</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="faculty">Select Faculty Member</label>
+                    <select id="faculty" name="faculty" required>
+                        <option value="">-- Choose Faculty --</option>
+                        <option value="drsmith">Dr. Jane Smith</option>
+                        <option value="profjohnson">Prof. David Johnson</option>
+                        <option value="msharris">Ms. Emily Harris</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label>1. Clarity of Explanations (1: Poor - 5: Excellent)</label>
+                <div class="rating-scale">
+                    <div class="rating-option">
+                        <input type="radio" id="clarity1" name="clarity" value="1" required>
+                        <label for="clarity1">1</label>
+                        <span>Poor</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="clarity2" name="clarity" value="2">
+                        <label for="clarity2">2</label>
+                        <span>Fair</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="clarity3" name="clarity" value="3">
+                        <label for="clarity3">3</label>
+                        <span>Good</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="clarity4" name="clarity" value="4">
+                        <label for="clarity4">4</label>
+                        <span>Very Good</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="clarity5" name="clarity" value="5">
+                        <label for="clarity5">5</label>
+                        <span>Excellent</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label>2. Faculty Availability & Support (1: Low - 5: High)</label>
+                <div class="rating-scale">
+                    <div class="rating-option">
+                        <input type="radio" id="support1" name="support" value="1" required>
+                        <label for="support1">1</label>
+                        <span>Low</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="support2" name="support" value="2">
+                        <label for="support2">2</label>
+                        <span>Below Avg.</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="support3" name="support" value="3">
+                        <label for="support3">3</label>
+                        <span>Average</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="support4" name="support" value="4">
+                        <label for="support4">4</label>
+                        <span>High</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="support5" name="support" value="5">
+                        <label for="support5">5</label>
+                        <span>Very High</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="strengths">What are the **strengths** of the course/faculty? (Optional)</label>
+                <textarea id="strengths" name="strengths" placeholder="E.g., The assignments were highly practical and engaging."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="improvements">What areas could be **improved**? (Required)</label>
+                <textarea id="improvements" name="improvements" required placeholder="Be specific and constructive. E.g., More real-world examples in the lectures would be beneficial."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+
+        </form>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2025 FeedbackFlow | College Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

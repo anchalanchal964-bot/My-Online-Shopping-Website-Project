@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+
+.sale{   
+    background-image: url(sale.jpg);
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+}
+
+.category-banner{
+    background-color: #333;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     margin-top: 50px;
+    margin-bottom: 50px;
+}
+.banner-title{
+    color:#fff;
+    font-size: 1.2 rem;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.content{
+    background-image: -moz-linear-gradient();
+}
+.banner{
+    background-image: url(banner\ sale.jpeg);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    text-align: center;
+    background-position: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    color:#fff;
+}
+</style>
+<body>
+    <section id="header">
+        <img src="vibewear 2.jpeg" width="200px" alt="Vibewear Logo">
+        <div>
+            <ul id="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+     <div class="sale">
+     </div>
+
+     <div class="category-banner">
+        <h2 class="banner-title">CATEGORIES</h2>
+    </div>
+
+   <div class="banner-container">
+        <a href="Tshirts.html" class="banner-item Tshirts-banner">   
+        <img src="m1.avif" alt="">
+        </a>
+        <a href="Bottoms MEN.html" class="banner-item bottoms-banner">
+        <img src="m2.avif" alt="">
+        </a>
+
+        <a href="MEN shirts.html" class="banner-item shirts-banner">
+        <img src="m3.avif" alt="">
+        </a>
+
+        <a href="polos.html" class="banner-item polos-banner">
+        <img src="m4.avif" alt="">
+        </a>
+
+        <a href="shorts.html" class="banner-item shorts-banner">
+        <img src="m5.avif" alt="">
+        </a>
+
+       <a href="jackets.html" class="banner-item jackets-banner">
+        <img src="m6.avif" alt="">
+        </a>
+
+    </div>
+
+    <div class="banner">
+        <div class="content">
+            <h1 class="heading">🎉 Festive Season Sale! 🎉</h1>
+            <p class="subtext">Up to **50% OFF** on all collections!</p>
+            <a href="ethnic2.html" class="cta-button">Shop Now</a>
+        </div>
+    </div>
+
+     <section id="newletter" class="section-p1">
+        <div class="newstext">
+            <h4>Sign Up For Newletters</h4>
+            <p>Get E-mail updates about or latest shop and <span> special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Enter your Email Address">
+            <button>Sign Up</button>
+        </div>
+    </section>
+    
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="vibewear 2.jpeg" width="120px" alt="Vibewear Logo">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (+91) 01 2345 6789, (+91) 07 8912 4567</p>
+            <p><strong>Hours:</strong> 10:00 AM - 06:00 PM, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="app.jpg" alt="App Store">
+                <img src="play.jpg" alt="Google Play">
+            </div>
+            <p><strong>Secured Payment Gateways</strong></p>
+            <img src="pay.png" alt="Payment Gateways">
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025, Tech2 etc-HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .hero-banner{
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 400px; 
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-banner .banner-content{
+            width: 100%;
+            max-width:500px ; 
+        }
+        .men-banner .banner-content{
+            text-align: right;
+            margin-left: auto;
+        }
+        .women-banner .banner-content{
+            text-align: left;
+            margin-right: auto;
+        }
+        .men-banner{
+           background-image: url(banner\ men.jpg);
+        }
+        .women-banner {
+          background-image: url(banner\ women.jpg);
+        }
+        .banner-content a{
+            background-color: transparent;
+            border-color: transparent;
+        } 
+    </style>
+</head>
+<body>
+    <section id="header">
+        <img src="vibewear 2.jpeg" width="200px" alt="Vibewear Logo">
+        <div>
+            <ul id="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="wishlist.html"><i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="hero-banner men-banner">
+        <div class="banner-content">
+            <p class="tagline">DISCOVER THE NEW ARRIVALS</p>
+            <h2 class="collection-title">MEN'S COLLECTION</h2>
+            <p class="subtitle">Elevate your style with our premium range of essential wear.</p>
+            <a href="sproduct2.html" class="shop-button">SHOP THE LOOK</a>
+        </div>
+    </div>
+
+    <div class="hero-banner women-banner">
+        <div class="banner-content ">
+            <p class="tagline">SPRING/SUMMER 2025 TRENDS</p>
+            <h2 class="collection-title">WOMEN'S COLLECTION</h2>
+            <p class="subtitle">Find your perfect fit with our stunning range of curated styles.</p>
+            <a href="sproduct.html" class="shop-button">SHOP THE LOOK</a>
+        </div>
+    </div>
+
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+    
+     <section id="newletter" class="section-p1">
+        <div class="newstext">
+            <h4>Sign Up For Newletters</h4>
+            <p>Get E-mail updates about or latest shop and <span> special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Enter your Email Address">
+            <button>Sign Up</button>
+        </div>
+    </section>
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="vibewear 2.jpeg" width="120px" alt="Vibewear Logo">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (+91) 01 2345 6789, (+91) 07 8912 4567</p>
+            <p><strong>Hours:</strong> 10:00 AM - 06:00 PM, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="app.jpg" alt="App Store">
+                <img src="play.jpg" alt="Google Play">
+            </div>
+            <p><strong>Secured Payment Gateways</strong></p>
+            <img src="pay.png" alt="Payment Gateways">
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025, Tech2 etc-HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+</body>
+</html>

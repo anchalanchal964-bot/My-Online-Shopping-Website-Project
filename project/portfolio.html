@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+header .profile img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #b62d59;
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+header .contact p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+header .contact i {
+  color: #b62d59;
+  margin-right: 8px;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #b62d59;
+  border-bottom: 2px solid #b62d59;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Work Experience */
+.experience {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.experience .exp-item span {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Education */
+.education {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.education ul {
+  list-style: none;
+}
+
+.education li {
+  margin-bottom: 15px;
+}
+
+/* Expertise Section */
+.expertise {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.expertise .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.expertise .tags span {
+  background: #b62d59;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Skills Section */
+.skills {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.skills-grid img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+</style>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="profile">
+      <img src="assets/profile.png" alt="Profile Picture">
+      <h1>Abhishek</h1>
+      <p>Creative graphic designer specialized in ad design, poster making, and promotional content.</p>
+      <div class="contact">
+        <p><i class="fas fa-phone-alt"></i> +91 8299886027</p>
+        <p><i class="fas fa-envelope"></i> abhishek@gmail.com</p>
+        <p><i class="fab fa-linkedin"></i> linkedin.com/in/abhishek</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Work Experience -->
+  <section class="experience">
+    <h2>Work Experiences</h2>
+    <div class="exp-item">
+      <span>2020 - Present | 5 yr</span>
+      <h3>Teaching & Management</h3>
+      <p>ALPHA COMPUTER INSTITUTE, Nonarper Point, Pratapgarh, Uttar Pradesh, India</p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <span>2016-2024</span> <strong>YOUTUBE & Self-Study</strong><br>
+        Self-taught in Computer Graphics, Motion Design, Video Editing, and Software Troubleshooting.
+      </li>
+      <li>
+        <span>2022-2023</span> <strong>T.S.N.C.P.S.M.B.S.S</strong><br>
+        MA Final Sociology
+      </li>
+      <li>
+        <span>2015-2016</span> <strong>P.P.R.I.C & B.R.P.P.B.H</strong><br>
+        High School
+      </li>
+    </ul>
+  </section>
+
+  <!-- Area of Expertise -->
+  <section class="expertise">
+    <h2>Area of Expertise</h2>
+    <div class="tags">
+      <span>AD DESIGN</span>
+      <span>POSTER DESIGN</span>
+      <span>WEDDING VIDEO EDITING</span>
+      <span>MOTION GRAPHICS</span>
+      <span>VIDEO AD DESIGN</span>
+      <span>PROMOTIONAL DESIGN</span>
+    </div>
+  </section>
+
+  <!-- Software Skills -->
+  <section class="skills">
+    <h2>Software Skills</h2>
+    <div class="skills-grid">
+      <img src="assets/photoshop.png" alt="Photoshop">
+      <img src="assets/illustrator.png" alt="Illustrator">
+      <img src="assets/aftereffects.png" alt="After Effects">
+      <img src="assets/lightroom.png" alt="Lightroom">
+      <img src="assets/indesign.png" alt="InDesign">
+      <img src="assets/premiere.png" alt="Premiere Pro">
+      <img src="assets/coreldraw.png" alt="CorelDRAW">
+      <img src="assets/word.png" alt="Word">
+      <img src="assets/excel.png" alt="Excel">
+      <img src="assets/powerpoint.png" alt="PowerPoint">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Abhishek | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

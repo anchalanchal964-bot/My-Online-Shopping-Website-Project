@@ -1,0 +1,321 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato - Order food online</title>
+</head>
+<style>
+/* === Reset Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+/* === Body Styling === */
+body {
+    background: #fff;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* =========================================
+   HEADER STYLING
+   ========================================= */
+header {
+    background: rgba(139, 17, 28, 0.95);   /* Zomato red */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Header darker when scrolled */
+header.scrolled {
+    background: #8b111c;
+}
+
+/* Logo */
+.logo img {
+    height: 45px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Search + Location */
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 25px;
+    padding: 6px 12px;
+}
+.header-search select,
+.header-search input {
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+}
+.header-search select {
+    background: transparent;
+    color: #444;
+    cursor: pointer;
+}
+.header-search input {
+    width: 160px;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+nav ul li {
+    position: relative;
+}
+header ul li a:hover {
+    color: #ffdada;
+    transform: scale(1.1);
+}
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+ transition: color 0.3s, transform 0.2s;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+/* Animated underline */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background: #ffdada;
+    transition: width 0.3s ease;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+nav ul li a:hover {
+    color: #ffdada;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #8b111c;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    nav.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        color: #fff;
+    }
+    .header-search {
+        display: none;
+    }
+}
+
+/* =========================================
+   MAIN / HERO STYLING
+   ========================================= */
+main {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('img/zomato.avif') no-repeat center center/cover;
+    color: #fff;
+}
+main img {
+    width: 280px;
+    margin-bottom: 25px;
+    animation: float 3s infinite ease-in-out;
+}
+main p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+/* Search Box */
+main input {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.3s;
+}
+main input:focus {
+    border-color: #ffdada;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Delivery Section */
+.delivery {
+    padding: 60px 40px;
+    background: #f9f9f9;
+    text-align: center;
+}
+.delivery h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #8b111c;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 280px;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.card h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   FOOTER STYLING
+   ========================================= */
+footer {
+    background: #8b111c;
+    color: #f5f3f3;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+footer a {
+    color: #ffdada;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #fff;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="sc-yvzia9-0 lngwlA"><img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" tabindex="0" class="sc-yvzia9-6 hxTfPc"></div>
+        </div>
+        <ul>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a  href="#">Add Restaurant</a></li>
+            <li><a  href="#">Sign In</a></li>       
+            <li><a  href="#">Cart</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section>
+            <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" alt="Zomato logo">
+            <p>Discover the best food and drinks in Yamunanagar</p>
+            <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+        </section>
+    </main>
+
+    <!-- Delivery Section -->
+    <section class="delivery">
+        <h2>Order Food Online</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Delicious cheesy pizzas from top restaurants near you.</p>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?burger" alt="Burger">
+                <h3>Burger</h3>
+                <p>Juicy burgers with crispy fries and cold drinks.</p>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?biryani" alt="Biryani">
+                <h3>Biryani</h3>
+                <p>Aromatic biryani with rich spices and flavors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Copyright &copy; 2025 | All rights reserved
+    </footer>
+</body>
+</html>
+
+ 
+ 
